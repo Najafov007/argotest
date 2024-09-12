@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - mysql-deploy.yaml
+  - pgadmin.yaml
+  - psql-deploy.yaml
+
+# secretGenerator:
+#   - name: mysql-secret
+#     literals:
+#       - mysql-password=password
+#       - mysql-root-password=rootpass
+#   - name: postgres-secret 
+#     literals:
+#       - postgres-password=password
+
